@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Pinterest Downloader",
+  "version": "1.0",
+  "description": "Fetch and display Pinterest pins from a board.",
+  "permissions": ["activeTab", "https://api.pinterest.com/*", "downloads"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://in.pinterest.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
