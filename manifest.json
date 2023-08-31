@@ -4,6 +4,7 @@
   "version": "1.0",
   "description": "Fetch and display Pinterest pins from a board.",
   "permissions": ["activeTab", "https://api.pinterest.com/*", "downloads"],
+  "host_permissions": ["http://127.0.0.1:5000/*"],
   "browser_action": {
     "default_popup": "popup.html"
   },
